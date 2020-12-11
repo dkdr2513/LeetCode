@@ -1,3 +1,5 @@
+package Arrays;
+
 import java.util.Arrays;
 
 public class removeDuplicates {
@@ -11,7 +13,8 @@ public class removeDuplicates {
     public int _removeDuplicates(int[] nums) {
         if (nums.length == 0) return 0;
         int i = 0;
-        for (int j = 0; j < nums.length; j++) {
+        for (int j = 0; j < nums.length; j++) { // 정렬되어 같은건 모여있기 떄문에, 하나씩 처음부터 확인하면된다. 그렇게 다른거 만나면 다음 새로운
+                                                // 숫자니까 그 자리에 그 다음 처음보는 새로운 숫자를 넣기.
             if (nums[j] != nums[i]) {
                 i++;
                 nums[i] = nums[j];
