@@ -8,7 +8,7 @@ public class rotate {
     }
 
     public static void _rotate(int[] nums, int k) {
-        k %= nums.length;
+        k %= nums.length; // 짝수 홀수 k 값 범위 설정
         reverse(nums, 0 , nums.length - 1);
         reverse(nums, 0, k - 1);
         reverse(nums, k, nums.length - 1);
